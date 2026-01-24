@@ -320,6 +320,93 @@
             display: block;
         }
         
+        /* Social Media Section */
+        .instagram-cta {
+            background: white;
+            padding: 3rem;
+            border-radius: 2px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .instagram-content {
+            text-align: center;
+        }
+        
+        .instagram-icon {
+            font-size: 3.5rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+        
+        .instagram-content h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--warm-coffee);
+            margin-bottom: 0.5rem;
+        }
+        
+        .instagram-content p {
+            color: var(--light-mocha);
+            margin-bottom: 2rem;
+        }
+        
+        .instagram-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #E1306C, #C13584, #833AB4);
+            color: white;
+            padding: 1rem 2.5rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(225, 48, 108, 0.3);
+        }
+        
+        .instagram-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(225, 48, 108, 0.4);
+        }
+        
+        .instagram-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        
+        .instagram-placeholder {
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, var(--soft-tan) 0%, var(--cream-white) 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .instagram-placeholder:hover {
+            transform: scale(1.05);
+        }
+        
+        #social p {
+            text-align: center;
+            max-width: 65ch;
+            margin: 0 auto 2rem;
+        }
+        
+        @media (max-width: 968px) {
+            .instagram-cta {
+                grid-template-columns: 1fr;
+            }
+        }
+        
         /* CTA Section */
         .cta-section {
             background: linear-gradient(135deg, var(--deep-espresso) 0%, var(--dark-chocolate) 100%);
@@ -440,6 +527,7 @@
         <a href="#about">About</a>
         <a href="#current-book">Current Read</a>
         <a href="#membership">Membership</a>
+        <a href="#social">Follow Us</a>
         <a href="#contact">Contact</a>
     </nav>
     
@@ -490,6 +578,40 @@
                     <span class="benefit-icon">☕</span>
                     <h3>Cozy Gatherings</h3>
                     <p>Monthly meetings in warm, welcoming spaces where comfort meets conversation. Enjoy refreshments, relaxed atmosphere, and genuine hospitality.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="social">
+            <h2>Follow Our Journey</h2>
+            <p>Stay connected with The Three Sisters Book Club! Follow us on Instagram for book recommendations, meeting updates, behind-the-scenes moments, and literary inspiration.</p>
+            
+            <div class="instagram-cta">
+                <div class="instagram-content">
+                    <span class="instagram-icon">📸</span>
+                    <h3>@threesistersbookclub_kc</h3>
+                    <p>Join our community of book lovers on Instagram</p>
+                    <a href="https://www.instagram.com/threesistersbookclub_kc/" target="_blank" rel="noopener noreferrer" class="instagram-button">Follow on Instagram</a>
+                </div>
+                <div class="instagram-grid">
+                    <div class="instagram-placeholder">
+                        <span>📚</span>
+                    </div>
+                    <div class="instagram-placeholder">
+                        <span>☕</span>
+                    </div>
+                    <div class="instagram-placeholder">
+                        <span>💬</span>
+                    </div>
+                    <div class="instagram-placeholder">
+                        <span>📖</span>
+                    </div>
+                    <div class="instagram-placeholder">
+                        <span>🤝</span>
+                    </div>
+                    <div class="instagram-placeholder">
+                        <span>✨</span>
+                    </div>
                 </div>
             </div>
         </section>
