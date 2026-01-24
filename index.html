@@ -219,6 +219,52 @@
             max-width: 75ch;
         }
         
+        /* About Section with Photo */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-top: 2rem;
+        }
+        
+        .about-text p {
+            max-width: 100%;
+        }
+        
+        .about-image {
+            position: relative;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 10px 40px rgba(93, 64, 55, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .about-image img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(93, 64, 55, 0.25);
+        }
+        
+        .image-caption {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            color: var(--light-mocha);
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+        
+        @media (max-width: 968px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+        
         /* Current Book Card */
         .current-book {
             background: white;
@@ -534,8 +580,16 @@
     <main>
         <section id="about">
             <h2>Our Story</h2>
-            <p>Welcome to The Three Sisters Book Club, a community built on the love of literature and the power of shared stories. Founded by three lifelong friends who believe that books have the remarkable ability to connect us across time, space, and experience, our club has grown into a vibrant community of readers who gather monthly to explore new worlds, challenge perspectives, and forge lasting friendships.</p>
-            <p>We're more than just a book club—we're a literary sanctuary where thoughtful discussion meets genuine connection. Whether you're a voracious reader or just beginning your literary journey, you'll find a welcoming home here among fellow book lovers.</p>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Welcome to The Three Sisters Book Club, a community built on the love of literature and the power of shared stories. Founded by three lifelong friends who believe that books have the remarkable ability to connect us across time, space, and experience, our club has grown into a vibrant community of readers who gather monthly to explore new worlds, challenge perspectives, and forge lasting friendships.</p>
+                    <p>We're more than just a book club—we're a literary sanctuary where thoughtful discussion meets genuine connection. Whether you're a voracious reader or just beginning your literary journey, you'll find a welcoming home here among fellow book lovers.</p>
+                </div>
+                <div class="about-image">
+                    <img src="three-sisters-photo.jpeg" alt="The Three Sisters - Molly, Katarina, and Emily at a bookstore" loading="lazy">
+                    <p class="image-caption">Molly, Katarina, and Emily - The Three Sisters</p>
+                </div>
+            </div>
         </section>
         
         <section id="current-book">
