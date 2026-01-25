@@ -51,9 +51,11 @@
         /* Header */
         header {
             position: relative;
-            background: linear-gradient(135deg, var(--cream-white) 0%, var(--soft-tan) 100%);
-            color: var(--deep-espresso);
-            padding: 3rem 2rem 4rem;
+            background: 
+                linear-gradient(135deg, rgba(93, 64, 55, 0.85) 0%, rgba(109, 76, 65, 0.85) 100%),
+                url('book-club-gathering.jpeg') center center / cover no-repeat;
+            color: var(--cream-white);
+            padding: 6rem 2rem 8rem;
             text-align: center;
             overflow: hidden;
         }
@@ -65,7 +67,7 @@
             right: -10%;
             width: 60%;
             height: 200%;
-            background: radial-gradient(circle, rgba(139, 111, 71, 0.03) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
             animation: floatDecor 20s ease-in-out infinite;
         }
         
@@ -93,23 +95,26 @@
             animation: fadeInDown 1s ease-out;
         }
         
-        .logo-header {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 2rem;
+        .site-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(3rem, 8vw, 5.5rem);
+            font-weight: 300;
+            letter-spacing: 0.02em;
+            margin-bottom: 0.5rem;
+            position: relative;
+            display: inline-block;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
         }
         
-        .main-logo {
-            max-width: 500px;
-            width: 100%;
-            height: auto;
-            animation: fadeIn 1.2s ease-out;
-        }
-        
-        @media (max-width: 768px) {
-            .main-logo {
-                max-width: 90%;
-            }
+        .site-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--golden-accent), transparent);
         }
         
         @keyframes fadeInDown {
@@ -158,9 +163,9 @@
             font-size: 1.2rem;
             font-style: italic;
             margin-top: 2rem;
-            color: var(--warm-coffee);
-            opacity: 0.9;
+            opacity: 0.95;
             font-weight: 300;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
         }
         
         /* Navigation */
@@ -559,9 +564,10 @@
     
     <header>
         <div class="header-content">
-            <div class="logo-header">
-                <img src="three-sisters-logo-header.jpeg" alt="The Three Sisters Book Club Logo" class="main-logo">
-            </div>
+            <h1 class="site-title">
+                Three Sisters<br>
+                Book Club
+            </h1>
             <p class="tagline">Where stories unite us and conversations flourish</p>
         </div>
     </header>
@@ -579,7 +585,7 @@
             <h2>Our Story</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Welcome to The Three Sisters Book Club, a community built on the love of literature and the power of shared stories. Founded by three sisters who believe that books have the remarkable ability to connect us across time, space, and experience, our club has grown into a vibrant community of readers who gather monthly to explore new worlds, challenge perspectives, and forge lasting friendships.</p>
+                    <p>Welcome to The Three Sisters Book Club, a community built on the love of literature and the power of shared stories. Founded by three lifelong friends who believe that books have the remarkable ability to connect us across time, space, and experience, our club has grown into a vibrant community of readers who gather monthly to explore new worlds, challenge perspectives, and forge lasting friendships.</p>
                     <p>We're more than just a book club—we're a literary sanctuary where thoughtful discussion meets genuine connection. Whether you're a voracious reader or just beginning your literary journey, you'll find a welcoming home here among fellow book lovers.</p>
                 </div>
                 <div class="about-image">
