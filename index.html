@@ -274,17 +274,6 @@
             margin-top: 2rem;
         }
         
-        .about-logo {
-            text-align: center;
-            margin-bottom: 2.5rem;
-        }
-
-        .about-logo img {
-            max-width: 320px;
-            width: 100%;
-            height: auto;
-        }
-
         .about-text p {
             max-width: 100%;
         }
@@ -461,9 +450,25 @@
         /* Benefits Grid */
         .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 2.5rem;
             margin-top: 2rem;
+        }
+
+        @media (max-width: 600px) {
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .meeting-info a {
+            color: var(--warm-coffee);
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+
+        .meeting-info a:hover {
+            color: var(--golden-accent);
         }
         
         .benefit-card {
@@ -666,9 +671,6 @@
     <main>
         <section id="about">
             <h2>Our Story</h2>
-            <div class="about-logo">
-                <img src="three sisters book club logo.png" alt="Three Sisters Book Club logo">
-            </div>
             <div class="about-content">
                 <div class="about-text">
                     <p>Hi! We're Emily, Molly, and Katarina, the sisters behind Three Sisters Book Club.</p>
@@ -695,7 +697,7 @@
                     <p>A romance and sports fiction novel about the intense, obsessive relationship between two elite figure skaters, Katarina Shaw and Heath Rocha, from their rise to Olympic fame to their dramatic downfall, explored through a documentary years later.</p>
                     <div class="meeting-info">
                         <strong>Next Meeting:</strong> March 26th (Thursday) from 6:30–8:30 PM<br>
-                        <strong>Location:</strong> O'Neill's Irish Pub (9417 Mission Rd.)<br>
+                        <strong>Location:</strong> <a href="https://www.google.com/maps/place/O'Neill's+Restaurant+%26+Bar/@38.9583476,-94.6298,17z/data=!3m1!4b1!4m6!3m5!1s0x87c0ee43198909f7:0xb19a370d6a929027!8m2!3d38.9583476!4d-94.6298!16s%2Fg%2F1td1vzlc?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">O'Neill's Restaurant &amp; Bar</a><br>
                         <strong>Price:</strong> Venmo $15 to @threesistersbookclubkc &amp; grab your copy from a friend, library, or your favorite bookstore.
                     </div>
                 </div>
@@ -713,7 +715,7 @@
                     <p>Join us for a fun evening with author, comedian, and Instagram favorite @thedailytay. We are celebrating Taylor Wolfe's new book, "Just a Busy Season." The event will be held the Wednesday after Mother's Day (May 13th), the perfect gift for sisters, moms, or your favorite gal pals. Enjoy a 45 minute comedy set, a live Q&amp;A, and a book signing with the hilariously witty Taylor Wolfe. Bring the giggles, and say "Cheers to the Merriment of Motherhood."</p>
                     <div class="meeting-info">
                         <strong>When:</strong> May 13th, 2026 (Wednesday) from 7:00–9:30 PM<br>
-                        <strong>Location:</strong> Blue Hills Country Club<br>
+                        <strong>Location:</strong> <a href="https://www.google.com/maps/place/Blue+Hills+Country+Club/@38.8991684,-94.6045878,17z/data=!3m1!4b1!4m6!3m5!1s0x87c0e82a0fd9ddaf:0x2fcbbccacbe502c9!8m2!3d38.8991643!4d-94.6020129!16s%2Fg%2F1thsgfrh?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Blue Hills Country Club</a><br>
                         <strong>Price:</strong> $75/ticket includes the live comedy set, drinks, apps, author conversation/Q&amp;A, book signing &amp; a feel-good evening guaranteed with lots of laughs.
                     </div>
                 </div>
