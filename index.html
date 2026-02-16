@@ -274,6 +274,17 @@
             margin-top: 2rem;
         }
         
+        .about-logo {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .about-logo img {
+            max-width: 320px;
+            width: 100%;
+            height: auto;
+        }
+
         .about-text p {
             max-width: 100%;
         }
@@ -334,20 +345,17 @@
         }
         
         .book-cover {
-            background: linear-gradient(135deg, var(--rich-brown), var(--warm-coffee));
-            aspect-ratio: 2/3;
             border-radius: 2px;
             box-shadow: 0 8px 30px rgba(0,0,0,0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            font-weight: 600;
-            line-height: 1.4;
+            overflow: hidden;
+        }
+
+        .book-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 2px;
         }
         
         .book-details h3 {
@@ -376,6 +384,80 @@
             color: var(--warm-coffee);
         }
         
+        /* Event Card */
+        .event-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 2px;
+            box-shadow:
+                0 10px 40px rgba(93, 64, 55, 0.15),
+                0 0 0 1px rgba(93, 64, 55, 0.08);
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow:
+                0 15px 50px rgba(93, 64, 55, 0.2),
+                0 0 0 1px rgba(93, 64, 55, 0.12);
+        }
+
+        .event-image {
+            border-radius: 2px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        .event-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 2px;
+        }
+
+        .event-details h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--warm-coffee);
+            margin-bottom: 1rem;
+        }
+
+        .event-details .meeting-info {
+            margin-top: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .event-card {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 2rem;
+            }
+
+            .event-image {
+                max-width: 280px;
+                margin: 0 auto;
+            }
+        }
+
+        /* Collage */
+        .community-collage {
+            margin-top: 3rem;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(93, 64, 55, 0.15);
+        }
+
+        .community-collage img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
         /* Benefits Grid */
         .benefits-grid {
             display: grid;
@@ -575,6 +657,7 @@
     <nav>
         <a href="#about">About</a>
         <a href="#current-book">Current Read</a>
+        <a href="#events">Events</a>
         <a href="#membership">Membership</a>
         <a href="#social">Follow Us</a>
         <a href="#contact">Contact</a>
@@ -583,36 +666,60 @@
     <main>
         <section id="about">
             <h2>Our Story</h2>
+            <div class="about-logo">
+                <img src="three sisters book club logo.png" alt="Three Sisters Book Club logo">
+            </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Welcome to The Three Sisters Book Club, a community built on the love of literature and the power of shared stories. Founded by three lifelong friends who believe that books have the remarkable ability to connect us across time, space, and experience, our club has grown into a vibrant community of readers who gather monthly to explore new worlds, challenge perspectives, and forge lasting friendships.</p>
-                    <p>We're more than just a book club—we're a literary sanctuary where thoughtful discussion meets genuine connection. Whether you're a voracious reader or just beginning your literary journey, you'll find a welcoming home here among fellow book lovers.</p>
+                    <p>Hi! We're Emily, Molly, and Katarina, the sisters behind Three Sisters Book Club.</p>
+                    <p>Since launching Three Sisters Book Club in Kansas City in 2022, our mission has been simple: create a welcoming space where book lovers can gather for laughter, lively debate, and the occasional passionate defense of a fictional character. We want to create a community filled with friendships that last longer than your TBR list.</p>
+                    <p>From author events and book club nights to our beloved Bibliobus and other literary adventures, we are endlessly grateful for every reader who shows up. Thank you for bringing your thoughtful takes, your honest ratings, and for enthusiastically participating when we absolutely insist on casting the hypothetical movie adaptation.</p>
+                    <p>We believe books are better when shared and we're so glad you're part of our story.</p>
                 </div>
                 <div class="about-image">
-                    <img src="three-sisters-photo.jpeg" alt="The Three Sisters - Molly, Katarina, and Emily at a bookstore" loading="lazy">
+                    <img src="3 sisters updated 2_16.jpg" alt="The Three Sisters - Molly, Katarina, and Emily at a bookstore" loading="lazy">
                     <p class="image-caption">Molly, Katarina, and Emily - The Three Sisters</p>
                 </div>
             </div>
         </section>
         
         <section id="current-book">
-            <h2>This Month's Selection</h2>
+            <h2>Next Book Club</h2>
             <div class="current-book">
                 <div class="book-cover">
-                    The Midnight Library
+                    <img src="the_favorites_book.png" alt="The Favorites book cover">
                 </div>
                 <div class="book-details">
-                    <h3>The Midnight Library</h3>
-                    <p class="book-author">by Matt Haig</p>
-                    <p>Between life and death there is a library, and within that library, the shelves go on forever. Every book provides a chance to try another life you could have lived. To see how things would be if you had made other choices... Would you have done anything different, if you had the chance to undo your regrets?</p>
+                    <h3>The Favorites</h3>
+                    <p class="book-author">by Layne Fargo</p>
+                    <p>A romance and sports fiction novel about the intense, obsessive relationship between two elite figure skaters, Katarina Shaw and Heath Rocha, from their rise to Olympic fame to their dramatic downfall, explored through a documentary years later.</p>
                     <div class="meeting-info">
-                        <strong>Next Meeting:</strong> February 15, 2026 at 7:00 PM<br>
-                        <strong>Location:</strong> The Reading Room Café, Downtown
+                        <strong>Next Meeting:</strong> March 26th (Thursday) from 6:30–8:30 PM<br>
+                        <strong>Location:</strong> O'Neill's Irish Pub (9417 Mission Rd.)<br>
+                        <strong>Price:</strong> Venmo $15 to @threesistersbookclubkc &amp; grab your copy from a friend, library, or your favorite bookstore.
                     </div>
                 </div>
             </div>
         </section>
         
+        <section id="events">
+            <h2>Upcoming Events</h2>
+            <div class="event-card">
+                <div class="event-image">
+                    <img src="just_a_busy_season.png" alt="Just a Busy Season by Taylor Wolfe">
+                </div>
+                <div class="event-details">
+                    <h3>An Evening with Taylor Wolfe</h3>
+                    <p>Join us for a fun evening with author, comedian, and Instagram favorite @thedailytay. We are celebrating Taylor Wolfe's new book, "Just a Busy Season." The event will be held the Wednesday after Mother's Day (May 13th), the perfect gift for sisters, moms, or your favorite gal pals. Enjoy a 45 minute comedy set, a live Q&amp;A, and a book signing with the hilariously witty Taylor Wolfe. Bring the giggles, and say "Cheers to the Merriment of Motherhood."</p>
+                    <div class="meeting-info">
+                        <strong>When:</strong> May 13th, 2026 (Wednesday) from 7:00–9:30 PM<br>
+                        <strong>Location:</strong> Blue Hills Country Club<br>
+                        <strong>Price:</strong> $75/ticket includes the live comedy set, drinks, apps, author conversation/Q&amp;A, book signing &amp; a feel-good evening guaranteed with lots of laughs.
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="membership">
             <h2>Why Join Us?</h2>
             <div class="benefits-grid">
@@ -637,8 +744,11 @@
                     <p>Monthly meetings in warm, welcoming spaces where comfort meets conversation. Enjoy refreshments, relaxed atmosphere, and genuine hospitality.</p>
                 </div>
             </div>
+            <div class="community-collage">
+                <img src="collage.png" alt="Three Sisters Book Club community collage" loading="lazy">
+            </div>
         </section>
-        
+
         <section id="social">
             <h2>Follow Our Journey</h2>
             <p>Stay connected with The Three Sisters Book Club! Follow us on Instagram for book recommendations, meeting updates, behind-the-scenes moments, and literary inspiration.</p>
@@ -656,7 +766,7 @@
         <section id="contact" class="cta-section">
             <h2>Begin Your Journey With Us</h2>
             <p>Ready to discover your next favorite book and meet your next favorite people? Join The Three Sisters Book Club today and become part of our reading family.</p>
-            <a href="mailto:hello@threesistersbookclub.com" class="cta-button">Join Our Circle</a>
+            <a href="mailto:Threesistersbookclubkc@gmail.com" class="cta-button">Join Our Circle</a>
         </section>
     </main>
     
